@@ -1,0 +1,87 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Fake News Detection Tool</h1>
+            <p>Analyze news articles with AI</p>
+        </div>
+
+        <div class="main-content">
+            <form action="/predict" method="POST">
+                <textarea name="news" placeholder="Enter the news article here..." required></textarea>
+                <button type="submit">Predict</button>
+            </form>
+
+            {% if prediction is not none %}
+                <div class="result">
+                    <h2>Prediction Result:</h2>
+                    <p class="prediction {% if prediction == 'fake' %}fake{% else %}real{% endif %}">
+                        The news is <strong>{{ prediction }}</strong>.
+                    </p>
+                    <p>Input News:</p>
+                    <p class="news-input">{{ input_news }}</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <footer>
+        <p>Powered by AI | Fake News Detection</p>
+    </footer>
+
+</body>
+</html>
+
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Fake News Detection Tool</h1>
+            <p>Analyze news articles with AI</p>
+        </div>
+
+        <div class="main-content">
+            <form action="/predict" method="POST">
+                <textarea name="news" placeholder="Enter the news article here..." required></textarea>
+                <button type="submit">Predict</button>
+            </form>
+
+            {% if prediction is not none %}
+                <div class="result">
+                    <h2>Prediction Result:</h2>
+                    <p class="prediction {% if prediction == 'fake' %}fake{% else %}real{% endif %}">
+                        The news is <strong>{{ prediction }}</strong>.
+                    </p>
+                    <p>Input News:</p>
+                    <p class="news-input">{{ input_news }}</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <footer>
+        <p>Powered by AI | Fake News Detection</p>
+    </footer>
+
+</body>
+</html>
+
+>>>>>>> 5b5a7876322b795fd22c341d22aebfd447a9094e
